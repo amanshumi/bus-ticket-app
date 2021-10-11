@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "858429749423",
+    "project_id": "verifyer-ticket-app",
+    "storage_bucket": "verifyer-ticket-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858429749423:android:5ddafd37f6a7ac38103c5a",
+        "android_client_info": {
+          "package_name": "com.example.cardapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858429749423-931odmafpplo3uls8h9pjghfacvqc80f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cardapp",
+            "certificate_hash": "9954d8b5375eecc5d4a00bd08ea9934190780837"
+          }
+        },
+        {
+          "client_id": "858429749423-7cd3rk324489q399iukpndebesfouab5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzQXpuyc7u7AcuJc_ParGxHvbVqY1RtXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858429749423-7cd3rk324489q399iukpndebesfouab5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

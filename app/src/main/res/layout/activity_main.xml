@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:background="@drawable/circle_main_header_radius"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0dp"
+            android:layout_marginTop="0dp">
+
+            <RelativeLayout
+
+                android:id="@+id/top_ins_rel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Welcome"
+                    android:id="@+id/top_welcome_text_dash"
+                    android:fontFamily="@font/lato"
+                    android:textSize="32sp"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"/>
+
+                <ActionMenuView
+                    android:outlineAmbientShadowColor="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/main_menu_top"
+                    android:layout_alignParentRight="true"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    tools:targetApi="lollipop" />
+
+<!--                <ImageView-->
+<!--                    android:layout_below="@id/top_people_box_illustr"-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="0dp"-->
+<!--                    android:src="@drawable/ic_wavee" />-->
+
+
+
+                <!--                <ImageView-->
+<!--                    android:background="@drawable/circle_profile"-->
+<!--                    android:id="@+id/image_avatar"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:src="@drawable/ic_person_black_24dp" />-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:src="@drawable/ic_exit_to_app_black_24dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/text_avatar"-->
+<!--                    android:fontFamily="@font/lato"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:layout_below="@+id/image_avatar"-->
+<!--                    android:padding="6dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:text="Bus Ticket Booking"-->
+<!--                    android:textSize="27sp" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:background="@drawable/text_back_email"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:fontFamily="@font/lato"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/text_avatar"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:padding="13dp"-->
+<!--                    android:text="johndoe@gmail.com"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_marginRight="20dp"/>-->
+            </RelativeLayout>
+
+
+
+            <GridLayout
+                android:columnCount="2"
+                android:rowCount="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/top_ins_rel">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:onClick="startBook"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="14dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="35dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_note_add_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/lato"
+                            android:text="Book"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_rowWeight="1"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:onClick="startBook"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="14dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="35dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:src="@drawable/money" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/lato"
+                            android:text="Bookings"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_row="1"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_column="0"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:onClick="startTravelHistory"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="14dp"-->
+<!--                    app:cardUseCompatPadding="true"-->
+<!--                    app:contentPadding="35dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_horizontal|center_vertical"-->
+<!--                        android:background="@drawable/border"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:src="@drawable/ic_history_black_24dp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:fontFamily="@font/lato"-->
+<!--                            android:text="Travel History"-->
+<!--                            android:textSize="11sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="startFeedbackActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_rowWeight="1"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="14dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="35dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/notification_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_feedback_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/notification_icon"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/lato"
+                            android:text="Feedback"
+                            android:textSize="11sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="2"
+                    android:onClick="startContract"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="14dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="35dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_receipt_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/lato"
+                            android:text="Contract"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_row="2"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_column="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:onClick="startAccount"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="14dp"-->
+<!--                    app:cardUseCompatPadding="true"-->
+<!--                    app:contentPadding="35dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_horizontal|center_vertical"-->
+<!--                        android:background="@drawable/border"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:src="@drawable/ic_account_circle_black_24dp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:fontFamily="@font/lato"-->
+<!--                            android:text="Account"-->
+<!--                            android:textSize="11sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+            </GridLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/nav_view"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="0dp"-->
+<!--        android:layout_marginEnd="0dp"-->
+<!--        android:background="?android:attr/windowBackground"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:menu="@menu/bottom_nav_menu" />-->
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_available_list"
+    android:layout_marginBottom="10dp"
+    android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/left_linear_layout">
+
+            <TextView
+                android:id="@+id/shareScId"
+                android:textStyle="bold"
+                android:fontFamily="@font/lato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/departingTime"
+                android:fontFamily="@font/lato"
+                android:textSize="11sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Departing Time : "/>
+
+            <TextView
+                android:id="@+id/price"
+                android:fontFamily="@font/lato"
+                android:textSize="11sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Price : "/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:fontFamily="@font/lato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:textSize="13sp"
+                android:text="Buy ticket"
+                android:textColor="#fff"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:background="@drawable/button_buy_ticket"/>
+
+
+        </LinearLayout>
+
+</RelativeLayout>

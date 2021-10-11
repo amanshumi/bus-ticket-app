@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FeedbackActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:id="@+id/top_bookings_rel_view">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/insite_bookings_top_relative_view">
+
+                    <ImageView
+                        android:onClick="backToMainFeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:padding="1dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/bookings_top_icon_view"
+                        android:src="@drawable/feedback_icon"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bookings_top_icon_view"
+                        android:textColor="#191919"
+                        android:textAlignment="center"
+                        android:padding="10dp"
+                        android:fontFamily="@font/lato"
+                        android:text="Contract"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="40dp"
+                android:orientation="vertical"
+                android:background="@drawable/white_form_bg"
+                android:layout_marginTop="-20dp">
+
+                <LinearLayout
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/gray_form_bg"
+                    >
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:padding="10dp"
+                        android:layout_height="wrap_content"
+                        android:text="Report Transport Issues"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/lato"/>
+
+                    <TextView
+                        android:background="#ffff"
+                        android:layout_width="match_parent"
+                        android:padding="10dp"
+                        android:textSize="11sp"
+                        android:lineHeight="22dp"
+                        android:layout_height="wrap_content"
+                        android:text="Let us know about how you feel about our service and also the things we need to
+change in the future inorder to give a better transport service to you. We would appreciateit very much."
+                        android:fontFamily="@font/lato"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/existing_contract_information"
+                    android:padding="2dp"
+                    android:background="#fff"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                        android:id="@+id/reason_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:fontFamily="@font/lato"
+                        android:hint="write here..."
+                        android:inputType="textMultiLine"
+                        android:maxLength="500"
+                        android:maxLines="4"
+                        android:padding="15dp"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:onClick="sendFeedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/button_buy_ticket"
+                        android:text="report"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/lato"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BusDetailActivity"
+    android:background="#fff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:paddingBottom="10dp"
+                    android:background="#fff"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:id="@+id/top_list_relative">
+
+                    <ImageView
+                        android:onClick="backToAvail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+                    <ImageView
+                        android:layout_height="200dp"
+                        android:layout_width="220dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/payment_illustration"/>
+
+                    <TextView
+                        android:fontFamily="@font/lato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Complete booking"
+                        android:layout_alignParentRight="true"
+                        android:textAlignment="center"
+                        android:layout_alignParentBottom="true"
+                        android:textSize="24sp"
+                        android:paddingBottom="10dp"
+                        android:id="@+id/bus_details_title"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/bus_list_bottom_bg"
+                android:paddingTop="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bus_list_bottom_bg">
+
+                    <include layout="@layout/single_bus_detail_top"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="0dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="110dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="10dp">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:src="@drawable/gray_available" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginTop="4dp"-->
+<!--                        android:fontFamily="@font/lato"-->
+<!--                        android:text="Available"-->
+<!--                        android:textAlignment="center" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="110dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:layout_centerHorizontal="true">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:src="@drawable/blue_selected"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:text="Selected"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginTop="4dp"-->
+<!--                        android:fontFamily="@font/lato"/>-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="110dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:layout_alignParentRight="true">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:src="@drawable/black_booked"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:text="Booked"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginTop="4dp"-->
+<!--                        android:fontFamily="@font/lato"/>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </RelativeLayout>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:drawable/editbox_background"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/person_ic_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_account_circle_black_24dp" />
+
+                <EditText
+                    android:id="@+id/fnameEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/person_ic_1"
+                    android:background="#ffff"
+                    android:fontFamily="@font/lato"
+                    android:hint="first name"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:padding="5dp"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:drawable/editbox_background"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/person_ic_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_account_circle_black_24dp" />
+
+                <EditText
+                    android:id="@+id/lnameEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/person_ic_2"
+                    android:background="#ffff"
+                    android:fontFamily="@font/lato"
+                    android:hint="last name"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:padding="5dp"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:drawable/editbox_background"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/phone_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_phone_android_black_24dp" />
+
+                <EditText
+                    android:id="@+id/phoneEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/phone_no"
+                    android:background="#ffff"
+                    android:fontFamily="@font/lato"
+                    android:hint="phone number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="5dp"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:drawable/editbox_background"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/address_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/location_address" />
+
+                <EditText
+                    android:id="@+id/addressEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/address_ic"
+                    android:background="#ffff"
+                    android:fontFamily="@font/lato"
+                    android:hint="address"
+                    android:inputType="text"
+                    android:maxLength="80"
+                    android:padding="5dp"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:drawable/editbox_background"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/children_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_child_care_black_24dp" />
+
+                <EditText
+                    android:id="@+id/childrenEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/children_icon"
+                    android:background="#ffff"
+                    android:fontFamily="@font/lato"
+                    android:hint="Children (2-11 years old)"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:padding="5dp"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:drawable/editbox_background"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/adult_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_adult_outline_black_24dp" />
+
+                <EditText
+                    android:id="@+id/adultsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/adult_icon"
+                    android:background="#ffff"
+                    android:fontFamily="@font/lato"
+                    android:hint="Adult (12+ years old)"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:padding="5dp"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:drawable/editbox_background">
+
+                <ImageView
+                    android:id="@+id/paymentMethodIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_attach_money_black_24dp" />
+
+                <Spinner
+                    android:layout_toEndOf="@id/paymentMethodIcon"
+                    android:id="@+id/spinner_payment_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="0dp"/>
+
+            </RelativeLayout>
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="10dp"-->
+<!--                android:fontFamily="@font/lato"-->
+<!--                android:text="Choose seat : "/>-->
+
+<!--            <Spinner-->
+<!--                android:id="@+id/spinner_seat_list"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@android:drawable/editbox_background_normal"-->
+<!--                android:padding="0dp" />-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/seat_list_radio_group"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:padding="10dp"-->
+<!--                android:layout_marginTop="10dp">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:id="@+id/seat_no_1"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:checked="true"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:layout_gravity="center" />-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_2"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                    </LinearLayout>-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_6"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"/>-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_7"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                    </LinearLayout>-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:id="@+id/seat_no_11"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available" />-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_12"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                    </LinearLayout>-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_16"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available" />-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_17"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                    </LinearLayout>-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_21"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available" />-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_22"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                    </LinearLayout>-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_26"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available" />-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_27"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                    </LinearLayout>-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_31"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available" />-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_32"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                    </LinearLayout>-->
+
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:layout_marginRight="20dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_3"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available" />-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_4"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_5"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                    </LinearLayout>-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_8"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available" />-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_9"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_10"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                    </LinearLayout>-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_13"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available" />-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_14"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_15"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                    </LinearLayout>-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_18"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available" />-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_19"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_20"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                    </LinearLayout>-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_23"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available" />-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_24"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_25"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                    </LinearLayout>-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_28"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available" />-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_29"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_30"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                    </LinearLayout>-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_33"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available" />-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_34"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                        <RadioButton-->
+<!--                            android:onClick="selectSeat"-->
+<!--                            android:foreground="@drawable/gray_available"-->
+<!--                            android:background="@drawable/gray_available"-->
+<!--                            android:id="@+id/seat_no_35"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/gray_available"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--                </RelativeLayout>-->
+<!--            </LinearLayout-->>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_buy_ticket"
+                    android:text="Book Now"
+                    android:onClick="startPaymentProcess"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/lato"
+                    android:textSize="14sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:padding="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookActivity"
+    android:background="#fff"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="210dp">
+
+                <RelativeLayout
+                    android:id="@+id/top_rela"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:background="#fff"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="20dp">
+
+                    <ImageView
+                        android:onClick="backToMain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_arrow_back_black_24dp" />
+
+                    <ImageView
+                        android:layout_width="220dp"
+                        android:layout_height="200dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/booking" />
+
+                    <TextView
+                        android:id="@+id/book_main_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/lato"
+                        android:padding="10dp"
+                        android:text="Book a ticket"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/top_rela"
+                android:background="#fff"
+                android:paddingTop="5dp"
+                android:paddingBottom="40dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/from_icon_in"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_location_on_black_24dp" />
+
+                        <Spinner
+                            android:id="@+id/originEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/from_icon_in"
+                            android:background="#ffff"
+                            android:fontFamily="@font/lato"
+                            android:hint="From"
+                            android:padding="0dp"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:drawable/editbox_background"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/to_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_location_on_black_24dp" />
+
+                        <Spinner
+                            android:id="@+id/destinationEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/to_icon"
+                            android:background="#ffff"
+                            android:fontFamily="@font/lato"
+                            android:hint="Destination"
+                            android:padding="0dp"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:drawable/editbox_background"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/dest_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_date_range_black_24dp" />
+
+                        <EditText
+                            android:id="@+id/datePickerTravelDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/dest_icon"
+                            android:background="#fff"
+                            android:focusable="false"
+                            android:fontFamily="@font/lato"
+                            android:hint="Date"
+                            android:inputType="datetime"
+                            android:onClick="showDatePicker"
+                            android:padding="5dp"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/button_buy_ticket"
+                        android:fontFamily="@font/lato"
+                        android:onClick="startAvailability"
+                        android:padding="10dp"
+                        android:text="Proceed"
+                        android:textColor="#fff" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

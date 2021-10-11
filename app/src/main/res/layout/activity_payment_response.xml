@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentResponseActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+    <ImageView
+        android:layout_marginTop="80dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/succeed_responseImg"/>
+
+    <TextView
+        android:layout_below="@+id/succeed_responseImg"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/lato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Processing..."
+        android:textAlignment="center"
+        android:id="@+id/paymentResponseTitle"/>
+
+    <Button
+        android:onClick="retryBooking"
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:fontFamily="@font/lato"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paymentResponseProgressBar"
+        android:background="@drawable/button_buy_ticket"
+        android:text="retry"
+        android:layout_marginLeft="20dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/retryBookingBtn"
+        android:textColor="#fff"/>
+
+    <Button
+        android:onClick="goHome"
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:fontFamily="@font/lato"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paymentResponseProgressBar"
+        android:background="@drawable/button_buy_ticket"
+        android:text="finish"
+        android:layout_marginLeft="20dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/homeBtnRes"
+        android:textColor="#fff"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/paymentResponseProgressBar"
+        android:layout_below="@id/paymentResponseTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

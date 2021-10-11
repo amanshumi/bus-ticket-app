@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentProcessActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+    <ImageView
+        android:layout_marginTop="40dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/cancelled_shit"
+        android:id="@+id/cancelledImage"/>
+
+    <TextView
+        android:layout_below="@+id/cancelledImage"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/lato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="payment has been cancelled."
+        android:id="@+id/paymentProcessTopTitle"/>
+
+    <Button
+        android:onClick="retryPayment"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:fontFamily="@font/lato"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paymentProcessTopTitle"
+        android:background="@drawable/button_buy_ticket"
+        android:text="retry payment"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentLeft="true"
+        android:textColor="#fff"/>
+
+    <Button
+        android:onClick="startHome"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:fontFamily="@font/lato"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paymentProcessTopTitle"
+        android:background="@drawable/button_buy_ticket"
+        android:text="go home"
+        android:layout_marginRight="20dp"
+        android:textColor="#fff"/>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SplashCreenActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/splashImage"
+            android:src="@drawable/app_main_icon"
+            android:layout_width="200dp"
+            android:layout_gravity="center"
+            android:layout_height="200dp"
+            android:background="@drawable/splash_screen_image_bg"
+            android:padding="4dp"/>
+
+        <TextView
+            android:padding="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Ticket Booking App"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/lato"/>
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="simple, reliable and secure ticket booking system"
+            android:textSize="12sp"
+            android:fontFamily="@font/lato"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_buy_ticket"
+            android:text="get started"
+            android:paddingLeft="30dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:paddingRight="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#fff"
+            android:fontFamily="@font/lato"
+            android:onClick="startFirstComponent"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
